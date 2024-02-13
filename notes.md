@@ -1,0 +1,3 @@
+- v-bind:src, v-bind:href, v-bind:class
+- input v-model=""
+- v-if, v-for
