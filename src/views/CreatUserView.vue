@@ -18,7 +18,7 @@ let usernameWarningText = ref("");
 let usernameWarningbool = ref(false);
 
 let didUserGetCreated = ref("");
-
+const router = useRouter();
 
 //funktions 
 //------------------------------
@@ -42,8 +42,13 @@ async function CreatUser(){
       headers: headersList,
       credentials: "include"
     });
-
+    console.log("----------------------");
+    console.log(response.status);
     didUserGetCreated.value = await response.text();
+    
+    if(response.status === 201){
+        router.push('/pokemongallary/1');
+    }
   }
 }
 //checks all allowed chars
@@ -116,17 +121,4 @@ function FindSpecialChars(string){
     <button @click="CreatUser">CreatNewUser</button>
     <p> {{ didUserGetCreated }}  </p>
  
-  
 </template>
-
-<style>
-  .input
-  {
-    display: flex;
-  }
-  label
-  {
-    margin-right: 1em;
-  }
-
-</style>

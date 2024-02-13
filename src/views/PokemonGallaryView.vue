@@ -47,25 +47,13 @@
 </script>
 
 <template>
-    <div class="content"> 
-        <button v-if="fetchOffset != 0" @click="previousPage">Previous page</button>
-        <button @click="nextPage">Next page</button>
-
-        <div class="pokeCards">
-            <PokeCard v-for="(pokeName, index) in pokeData" 
-                :name="pokeName"
-                :id="pokeId[index]"/>
-        </div>
-    </div>
+  <div class="grid grid-cols-3 gap-4 justify-center place-items-center text-sm text-center text-gray-600 "> 
+      <PokeCard v-for="(pokeName, index) in pokeData" 
+      :name="pokeName"
+      :id="pokeId[index]"/>
+  </div>
+  <div class="flex place-items-center items-center justify-center">
+    <button class="flex items-center justify-center h-4 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-md xl:h-6 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" v-if="fetchOffset != 0" @click="previousPage">Previous page</button>
+    <button class="flex items-center justify-center h-4 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-md xl:h-6 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="nextPage">Next page</button>
+  </div>
 </template>
-
-<style>
-
-.pokeCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-</style>

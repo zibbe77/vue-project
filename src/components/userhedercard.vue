@@ -1,11 +1,7 @@
 <script setup>
-  import { ref, watch } from 'vue';
-  import { useRoute , useRouter} from 'vue-router';
+  import { ref } from 'vue';
 
-  let username = ref("");
-  let password = ref("");
   let usernameDisplay = ref("");
-  let responseText = ref("");
   const logIn = ref("false");
 
 //functions
@@ -41,28 +37,6 @@ function getCookieName(name){
     return false
 }
 
-async function request (){
-
-    let headersList = {
-      "Accept": "*/*",
-      "User-Agent": "Vueproject"
-    }
-
-    headersList.authorization = "Basic " + window.btoa(username.value + ":" + password.value);
-
-    let response = await fetch("http://localhost:8080/signin", { 
-      method: "GET",
-      mode: "cors",
-      headers: headersList,
-      credentials: "include"
-    });
-    responseText.value = await response.text();
-
-    if(response.status === 200){
-        logIn.value = true;
-    }
-  }
-
 //code
 //-----------------------------------------
 
@@ -81,26 +55,15 @@ window.setInterval(()=>{
 </script>
 
 <template>
-    <div v-if="logIn === false">
-        <form>
-          <div class="input">
-            <label for="fname">User name:</label><br>
-            <input v-model="username" placeholder="enter username">
-          </div>
-          <div class="input">
-            <label for="lname">Password:</label><br>
-            <input v-model="password" placeholder="enter password">
-        </div>
-    </form>
-    <button @click="request">Sign in</button>
-    <p>{{ responseText }}</p>
+    <div class="flex relative justify-center float-right" v-if="logIn === false">
+        <RouterLink class="flex items-center justify-center mx-2 h-12 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-lg xl:h-10 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" to="/signin">Sign in</RouterLink>
+        <RouterLink class="flex items-center justify-center mx-2 h-12 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-lg xl:h-10 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" to="/creatuser">Sign up</RouterLink>
     </div>
     <div v-else>
         <RouterLink to="/user"> {{ usernameDisplay }}</RouterLink>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
     </div>
 
 </template>
-
-<style>
-
-</style>
