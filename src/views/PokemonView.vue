@@ -120,7 +120,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="m-3">
     <p v-if="pokeData">{{ pokeData.name }}</p>
     <p v-else-if="pokeData === false">Not found</p>
     <p v-else>Loading...</p>
@@ -143,8 +143,8 @@
         <span> {{ element.ability.name }}</span>
       </li>
       <div v-if="logIn === true">
-        <button v-if="isFav === false" @click="addFav">Add to favourites</button>
-        <button v-if="isFav === true" @click="removeFav">Remove from favourites</button>
+        <button v-if="isFav === false" class="flex items-center justify-center h-4 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-md xl:h-6 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="addFav">Add to favourites</button>
+        <button v-if="isFav === true" class="flex items-center justify-center h-4 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-md xl:h-6 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="removeFav">Remove from favourites</button>
       </div>
 
       <h3>moves</h3> 

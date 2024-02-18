@@ -35,18 +35,18 @@ async function request (){
 </script>
 
 <template>
-    <form>
-      <div class="flex flex-col items-center justify-center h-12 px-4 mt-2 text-sm text-center">
+  <div class="grid place-content-center p-3 m-3 ">
+    <form class="border border-gray-200 p-2 m-2 rounded-sm">
         <div class="flex text-center">
-            <label>User name:</label><br>
+            <label class="pr-2">User name:</label><br>
             <input v-model="username" placeholder="enter username">
           </div>
-        <div class="flex text-center">
-            <label>Password:</label><br>
+        <div class="flex text-center pt-1">
+            <label class="pr-3">Password: </label><br>
             <input v-model="password" placeholder="enter password">
         </div>
-        <button @click="request"> Sign in </button>
-        <p> {{ responseText }}</p>
-      </div>
-    </form>
+      </form>
+      <button class="flex items-center justify-center mx-2 h-12 px-4 mt-2 text-lg text-gray-600 text-center transition-colors duration-200 transform border rounded-lg xl:h-10 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="request"> Sign in </button>
+      <p> {{ responseText }}</p>
+  </div>
 </template>

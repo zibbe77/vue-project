@@ -106,19 +106,32 @@ function FindSpecialChars(string){
 </script>
 
 <template>
-  <form>
-      <div class="input">
-        <label for="fname">User name:</label><br>
-        <input v-model="username" placeholder="enter username">
-        <p v-if="usernameWarningbool === true"> {{ usernameWarningText }}</p>
-      </div>
-      <div class="input">
-        <label for="lname">Password:</label><br>
-        <input v-model="password" placeholder="enter password">
-        <p v-if="passwordWarningbool === true">{{ passwordWarningText }} </p>
-      </div>
-  </form>
-    <button @click="CreatUser">CreatNewUser</button>
-    <p> {{ didUserGetCreated }}  </p>
+  <div class="grid place-content-center p-3 m-3 ">
+    <form class=" border border-gray-200 p-2 m-2 rounded-sm">
+        <div class="p-2">
+          <label>User name:</label><br>
+          <input v-model="username" placeholder="enter username">
+          <div v-if="usernameWarningbool === true" class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgba(220, 38, 38)" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+             </svg>
+            <p class="text-sm text-red-600"> {{ usernameWarningText }}</p>
+          </div>
+
+        </div>
+        <div class="p-2">
+          <label for="lname">Password:</label><br>
+          <input v-model="password" placeholder="enter password">
+          <div v-if="usernameWarningbool === true" class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgba(220, 38, 38)" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+             </svg>
+            <p class="text-sm text-red-600"> {{ passwordWarningText }} </p>
+          </div>
+        </div>
+    </form>
+      <button class="flex items-center justify-center mx-2 h-12 px-4 mt-2 text-lg text-gray-600 text-center transition-colors duration-200 transform border rounded-lg xl:h-10 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="CreatUser">Sign up</button>
+      <p> {{ didUserGetCreated }}  </p>
+  </div>
  
 </template>
