@@ -35,7 +35,7 @@ async function request (){
 </script>
 
 <template>
-  <div class="grid place-content-center p-3 m-3 ">
+  <div class="grid place-content-center p-3 m-3 customBackgrund">
     <form class="border border-gray-200 p-2 m-2 rounded-sm">
         <div class="flex text-center">
             <label class="pr-2">User name:</label><br>

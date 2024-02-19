@@ -126,7 +126,7 @@
     <p v-else>Loading...</p>
 
     <div v-if="pokeData" class="content">
-      <img v-bind:src="imgSrc" />
+      <img class="object-cover h-48 w-48" v-bind:src="imgSrc" />
       <p>Height {{ pokeData.height }} </p>
       <p>Weight {{ pokeData.weight }} </p>
       <p>Base experience  {{ pokeData.base_experience }} </p>

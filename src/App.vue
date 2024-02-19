@@ -15,12 +15,12 @@ import userhedercard from './components/userhedercard.vue';
       <Suspense>
         <RouterView />
       </Suspense>
-   
+  
     <footer class="bg-white dark:bg-gray-900 ">
       <div class="container px-6 py-8 mx-auto">
           <hr class="my-10 border-gray-200 dark:border-gray-700" />
-          <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-              <p class="text-sm text-gray-500">© Copyright 2021. All Rights Reserved.</p>
+          <div class="flex flex-col items-center sm:flex-row sm:justify-between" >
+              <p class="text-sm text-gray-500">© Copyright 2024. All Rights Reserved.</p>
               <div class="flex mt-3 -mx-2 sm:mt-0">
                   <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
   
@@ -33,46 +33,3 @@ import userhedercard from './components/userhedercard.vue';
   </footer>
   </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  /* max-height: 30vh;
-  display: flex;
-  justify-content: space-between; */
-  align-items: center;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  display: flex;
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-  justify-content: space-around;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-</style>
