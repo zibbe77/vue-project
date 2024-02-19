@@ -8,7 +8,12 @@ import userhedercard from './components/userhedercard.vue';
 <template>
   <div class="flex flex-col h-screen justify-between">
     <header class="flex flex-row mb-5 pb-2 justify-between border border-gray-200" >
-      <RouterLink class="flex items-center justify-start h-12 mx-2 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-lg xl:h-10 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" to="/pokemongallary/1">Gallary</RouterLink>
+      <RouterLink class="flex items-center justify-start h-12 mx-2 px-4 mt-2 Times-New-Roman text-2xl text-center text-lime-500 underline decoration-double tracking-wide	transition-colors duration-200 transform xl:h-10 hover:text-lime-600 focus:outline-none" to="/pokemongallary/1"> 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+       Gallary
+      </RouterLink>
       <userhedercard></userhedercard>
     </header>
     

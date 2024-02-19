@@ -11,8 +11,8 @@ let imgLink = ref(linkPoke + props.id + '.png');
 </script>
 
 <template>
-    <div class="">
-        <RouterLink class="" :to="pokemonPage + props.id" >{{ props.name }}</RouterLink>
+    <div class="border rounded-md duration-200 hover:bg-lime-100  m-2 p-2">
+        <RouterLink class="text-gray-600 text-center" :to="pokemonPage + props.id" >{{ props.name }}</RouterLink>
         <RouterLink :to="pokemonPage + props.id" > <img :src="imgLink" :onerror="() => {
               imgLink = linkPoke + 'substitute.png';} ">
         </RouterLink>

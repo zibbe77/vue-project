@@ -127,7 +127,7 @@ async function removeFav(){
 
 <template>
     <div class="m-3">
-        <p>Name >>> {{ moveData.name }}</p>
+        <h2 class="flex justify-center text-2xl "> Move: {{ moveData.name }}</h2>
         <p>Power >>> {{ moveData.power }}</p>
         <p>PP >>> {{ moveData.pp }}</p>
         <p>Priority >>> {{ moveData.priority }}</p>
@@ -205,8 +205,11 @@ async function removeFav(){
         <button v-if="isFav === true" class="flex items-center justify-center h-4 px-4 mt-2 text-sm text-center text-gray-600 transition-colors duration-200 transform border rounded-md xl:h-6 dark:text-gray-300 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" @click="removeFav">Remove from favourites</button>
         </div>
 
-        <div>
-            <li v-for="(element) in moveData.learned_by_pokemon">
+        
+
+        <div class="m-3 p-1">
+            <h2 class="text-xl underline">Pokemoves with the move {{ moveData.name }}</h2>
+            <li class="text-gray-700 duration-200 hover:text-lime-400 hover:font-bold" v-for="(element) in moveData.learned_by_pokemon">
                 <RouterLink :to="pokemonPage + element.url.substr(34, 5).replace('/','')" >{{ element.name }}</RouterLink>
             </li>
         </div>
