@@ -7,18 +7,18 @@ const router = createRouter({
       path: '/',
       name: 'home',
       redirect: (to) => {
-        return { path: '/pokemongallary/1' }
+        return { path: '/pokemongalary/1' }
       }
     },
     {
-      path: '/pokemongallary/:page',
-      name: 'pokemongallary',
-      component: () => import('../views/PokemonGallaryView.vue')
+      path: '/pokemongalary/:page',
+      name: 'pokemongalary',
+      component: () => import('../views/PokemonGalaryView.vue')
     },
     {
-      path: '/pokemongallary/',
+      path: '/pokemongalary/',
       redirect: (to) => {
-        return { path: '/pokemongallary/1' }
+        return { path: '/pokemongalary/1' }
       }
     },
     {

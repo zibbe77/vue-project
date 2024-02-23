@@ -22,7 +22,7 @@ import { useRoute , useRouter} from 'vue-router';
       document.cookie = 'auth=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
       document.cookie = 'username=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
      
-      router.push('/pokemongallary/1');
+      router.push('/pokemongalary/1');
     }
 </script>
 

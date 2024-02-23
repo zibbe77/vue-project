@@ -29,13 +29,13 @@
   function nextPage(){
     pageNum++;
     fetchOffset.value += 30;
-    router.push("/pokemongallary/" + pageNum);
+    router.push("/pokemongalary/" + pageNum);
     getPokInfo();
   }
   function previousPage(){
     pageNum--;
     fetchOffset.value -= 30;
-    router.push("/pokemongallary/" + pageNum);
+    router.push("/pokemongalary/" + pageNum);
     getPokInfo();
   }
   
