@@ -11,6 +11,9 @@ This is a web application that handles pokemons. Using the pokeApi and a backend
 - A profil screen
 - Lets you save your favorite pokemons and moves that can be viewed in your profile or on their respected pages.
 
+## Tech  stack 
+This project is using vue 3 frontend with the composition api, tailwind for css and is running  in bun a drop in replacement for node. The backend is using elysia replacement for express, mongoose interface for mongoDB that's hosted on mongoDB atlas and is running on bun.
+
 ## Dependencies
 > Using bun\
 > ├── @headlessui/vue@1.7.19\
